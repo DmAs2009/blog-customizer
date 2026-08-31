@@ -12,6 +12,13 @@
 	transform: translate(0);
 }
 
+.header {
+	padding-bottom: 50px;
+	font-size: 31px;
+	font-style: bold;
+	text-transform: uppercase;
+}
+
 .form {
 	display: flex;
 	flex-shrink: 0;
