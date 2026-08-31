@@ -8,9 +8,7 @@ import { defaultArticleState } from './../../constants/articleProps';
 import styles from './app.module.scss';
 
 export const App = () => {
-	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [pageState, setPageState] = useState(defaultArticleState);
-	const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
 	const applySettings = (newState: typeof defaultArticleState) => {
 		setPageState(newState);
 	};
@@ -27,11 +25,7 @@ export const App = () => {
 					'--bg-color': pageState.backgroundColor.value,
 				} as CSSProperties
 			}>
-			<ArticleParamsForm
-				isSidebarOpen={isSidebarOpen}
-				onToggle={toggleSidebar}
-				onApply={applySettings}
-			/>
+			<ArticleParamsForm onApply={applySettings} />
 			<Article />
 		</main>
 	);
